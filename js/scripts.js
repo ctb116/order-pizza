@@ -29,9 +29,10 @@ $(document).ready(function() {
     var toppingsArry = [];
 
     var order = new Pizza(orderSize, toppingsArry);
+    order.cost();
+
     console.log(order.size);
     console.log(order.toppings);
-    console.log(order.cost());
 
     $("input:checkbox[name=orderToppings]:checked").each(function(){
       var orderToppings = $(this).val();
