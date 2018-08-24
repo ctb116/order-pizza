@@ -11,14 +11,15 @@ $(document).ready(function() {
     event.preventDefault();
 
     var orderSize = $("#orderSize").val();
-    console.log(orderSize);
+    var toppingsArry = [];
+
+    var order = new Pizza(orderSize, toppingsArry);
+    console.log(order.size);
+    console.log(order.toppings);
 
     $("input:checkbox[name=orderToppings]:checked").each(function(){
       var orderToppings = $(this).val();
-
-      var order = new Pizza(orderSize, orderToppings);
-
-                console.log(order.toppings)
+      toppingsArry.push(orderToppings);
     });
   });
 });
