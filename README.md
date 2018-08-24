@@ -6,16 +6,18 @@
 
 ## Description
 
-_This is an interactive webpage designed to demonstrate my skills using JavaScript Constructors and Prototypes._
+_This is an interactive webpage designed to demonstrate my skills using JavaScript Constructors and Prototypes. Users can mock order a pizza by selecting pizza size and toppings._
 
 ### Specifications
-_Users can "order a pizza" using this program_
 
-* _1) Users select pizza size and toppings._
-* _2) Users submit order and receive a cost based on their selection._
+* _1) Users start on homepage._
+* _2) Users click [Start your Order] button to see options for their pizza. Options are:_
+  * _Size dropdown form: small, medium, large_
+  * _Toppings checkbox form: cheese, pepperoni, artichoke, anchovy_
+* _3) Once users have decided on their options, users click [Add to Order] button to see the cost of their selection._
 
   * _**Example Input: User selects a small pizza with two toppings**_
-  * _**Example Output: "$5 for a small pizza"**_
+  * _**Example Output: "$5 for a small pizza and $4 added for 2 toppings"**_
 
 ## Setup/Installation Requirements
 
@@ -26,7 +28,11 @@ _This webpage will likely work as expected in any web browser but specifically w
 
 ## Known Bugs
 
-* _TBD_
+* _Users cannot see a total price for the size cost plus the toppings cost of the pizza._
+* _Users cannot confirm their order after they see their selection._
+* _Only one pizza can be ordered at a time._
+* _Users cannot see which toppings they ordered by looking at their order list alone._
+* _Users cannot select delivery and program does not accept an address._
 
 ## Support and contact details
 

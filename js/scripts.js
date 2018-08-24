@@ -7,30 +7,15 @@ function Pizza(size, toppings) {
 Pizza.prototype.cost = function() {
   var sizePrice;
   if (this.size === "small") {
-    sizePrice = "$5";
+    sizePrice = 5;
   } else if (this.size === "medium") {
-    sizePrice = "$10";
+    sizePrice = 10;
   } else {
-    sizePrice = "$20";
+    sizePrice = 20;
   }
-  $("#orderItems").text(sizePrice + " for a " + this.size + " pizza")
+  $("#orderItems").text("$" + sizePrice + " for a " + this.size + " pizza")
+  // totalPriceArry.push(sizePrice);
 }
-
-// Pizza.prototype.list = function() {
-//   var toppingsAmount = this.toppings;
-//   console.log(toppingsAmount.length);
-//   if (toppingsAmount.length === 0) {
-//     $("#orderToppings").text(" and $0 added for no toppings")
-//   } else if (toppingsAmount.length === 1) {
-//     $("#orderToppings").text(" and $2 added for 1 topping")
-//   } else if (toppingsAmount.length === 2) {
-//     $("#orderToppings").text(" and $4 added for 2 toppings")
-//   } else if (toppingsAmount.length === 3) {
-//     $("#orderToppings").text(" and $6 added for 3 toppings")
-//   } else if (toppingsAmount.length === 4) {
-//     $("#orderToppings").text(" and $8 added for 4 toppings")
-//   }
-// }
 
 Pizza.prototype.list = function() {
   var toppingsAmount = this.toppings;
@@ -47,7 +32,20 @@ Pizza.prototype.list = function() {
     toppingsPrice = 8;
   }
   $("#orderToppings").text(" and $" + toppingsPrice + " added for " + toppingsAmount.length + " toppings")
+  // totalPriceArry.push(toppingsPrice);
 }
+
+// var totalPriceArry = [];
+// console.log(totalPriceArry)
+// var sum = [1, 2, 4].reduce(add, 0);
+//
+// function add(a, b) {
+//   return a + b;
+// }
+//
+// console.log(sum);
+//
+
 
 // User Interface
 $(document).ready(function() {
@@ -71,6 +69,7 @@ $(document).ready(function() {
     $("#orderResult").show()
     order.cost();
     order.list();
+
     console.log(order.size);
     console.log(order.toppings);
   });
