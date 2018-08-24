@@ -14,6 +14,11 @@ Pizza.prototype.cost = function() {
   }
 }
 
+Pizza.prototype.toppingsSelected = function() {
+  console.log(this.toppings.toString());
+  // $("#orderResult2").text([this.toppings]);
+  // return this.toppings;
+}
 
 // User Interface
 $(document).ready(function() {
@@ -30,6 +35,7 @@ $(document).ready(function() {
 
     var order = new Pizza(orderSize, toppingsArry);
     order.cost();
+    order.toppingsSelected();
 
     console.log(order.size);
     console.log(order.toppings);
