@@ -4,6 +4,17 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
+Pizza.prototype.cost = function() {
+  if (this.size === "small") {
+    console.log("$5 for small");
+  } else if (this.size === "medium") {
+    console.log("$10 for medium");
+  } else {
+    console.log("$20 for large");
+  }
+}
+
+
 // User Interface
 $(document).ready(function() {
 
