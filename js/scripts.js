@@ -18,6 +18,10 @@ Pizza.prototype.cost = function() {
 // User Interface
 $(document).ready(function() {
 
+  $("#startOrder").click(function(){
+    $("form#orderPizza").show();
+  });
+
   $("form#orderPizza").submit(function(event) {
     event.preventDefault();
 
