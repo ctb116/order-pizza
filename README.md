@@ -32,7 +32,7 @@ _This webpage will likely work as expected in any web browser but specifically w
 * _Users cannot confirm their order after they see their selection._
 * _Only one pizza can be ordered at a time._
 * _Users cannot see which toppings they ordered by looking at their order list alone._
-* _Users cannot select delivery and program does not accept an address._
+* _Users cannot select delivery and program does not accept name and address information._
 
 ## Support and contact details
 
