@@ -5,7 +5,7 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.cost = function() {
-  if (this.size === "small") {
+  if (this.size === "small" && this.toppings[0] === "cheese") {
     $("#orderResult").text("$5 for small");
   } else if (this.size === "medium") {
     $("#orderResult").text("$10 for medium");
@@ -13,6 +13,10 @@ Pizza.prototype.cost = function() {
     $("#orderResult").text("$20 for large");
   }
 }
+//
+// function Call() {
+//   this.topping
+// }
 
 // User Interface
 $(document).ready(function() {
@@ -28,14 +32,14 @@ $(document).ready(function() {
     var toppingsArry = [];
 
     var order = new Pizza(orderSize, toppingsArry);
-    order.cost();
-
-    console.log(order.size);
-    console.log(order.toppings);
 
     $("input:checkbox[name=orderToppings]:checked").each(function(){
       var orderToppings = $(this).val();
       toppingsArry.push(orderToppings);
     });
+    order.cost();
+    console.log(order.size);
+    console.log(order.toppings);
+
   });
 });
