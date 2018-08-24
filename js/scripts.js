@@ -5,13 +5,15 @@ function Pizza(size, toppings) {
 }
 
 Pizza.prototype.cost = function() {
+  var sizePrice;
   if (this.size === "small") {
-    $("#orderItems").text("$5 for a small pizza");
+    sizePrice = "$5";
   } else if (this.size === "medium") {
-    $("#orderItems").text("$10 for medium pizza");
+    sizePrice = "$10";
   } else {
-    $("#orderItems").text("$20 for large pizza");
+    sizePrice = "$20";
   }
+  $("#orderItems").text(sizePrice + " for a " + this.size + " pizza")
 }
 
 Pizza.prototype.list = function() {
@@ -49,6 +51,7 @@ $(document).ready(function() {
       var orderToppings = $(this).val();
       toppingsArry.push(orderToppings);
     });
+    $("#orderResult").show()
     order.cost();
     order.list();
     console.log(order.size);

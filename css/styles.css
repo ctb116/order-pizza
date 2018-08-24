@@ -3,6 +3,6 @@ img {
   margin-bottom: 20px;
 }
 
-#orderPizza {
+#orderPizza, #orderResult {
   display: none;
 }
