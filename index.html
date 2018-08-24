@@ -12,6 +12,7 @@
     <input type="text" id="num"> -->
 
     <form id="orderPizza">
+      <!-- order size of pizza -->
       <div class="form-group">
         <select class="form-control" id="orderSize">
           <option value="small">small</option>
@@ -19,7 +20,7 @@
           <option value="large">large</option>
         </select>
       </div>
-
+      <!-- order toppings on pizza -->
       <div class="form-group">
         <p>What would you like on your pizza?</p>
         <input type="checkbox" name="orderToppings" value="cheese">cheese<br>
@@ -27,10 +28,11 @@
         <input type="checkbox" name="orderToppings" value="artichoke">artichoke<br>
         <input type="checkbox" name="orderToppings" value="anchovy">anchovy<br>
       </div>
-
       <button type="submit">Order</button>
-
     </form>
+
+    <div id="orderResult">
+    </div>
 
   </body>
 </html>
